@@ -30,6 +30,10 @@
   "release": {
     "config": "conventional-changelog-conventionalcommits",
     "branches": ["main"],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator"
+    ],
     "dryRun": false,
     "ci": true
   }
