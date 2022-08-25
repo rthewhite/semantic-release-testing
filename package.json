@@ -30,7 +30,7 @@
   "release": {
     "config": "conventional-changelog-conventionalcommits",
     "branches": ["main"],
-    "dryRun": true,
-    "ci": false
+    "dryRun": false,
+    "ci": true
   }
 }
