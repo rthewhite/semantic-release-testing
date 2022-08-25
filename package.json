@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -17,10 +19,18 @@
   },
   "homepage": "https://github.com/rthewhite/semantic-release-testing#readme",
   "devDependencies": {
+    "@commitlint/config-conventional": "^17.0.3",
+    "@commitlint/cli": "^17.0.3",
     "husky": "^8.0.1",
     "semantic-release": "^19.0.5"
   },
   "dependencies": {
-    "@commitlint/config-conventional": "^17.0.3"
+
+  },
+  "release": {
+    "config": "conventional-changelog-conventionalcommits",
+    "branches": ["main"],
+    "dryRun": true,
+    "ci": false
   }
 }

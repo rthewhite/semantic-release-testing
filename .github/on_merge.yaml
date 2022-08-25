@@ -1,0 +1,26 @@
+name: MERGE
+env:
+  HUSKY: 0 # Disables husky in the pipeline to allow pushing back version bump to repo
+
+on:
+  push:
+   branches:
+    - main
+
+jobs:
+  build_and_publish:
+    name: Build and publish to NPM
+    environment: dev_environment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Dependencies
+        run: npm run release
