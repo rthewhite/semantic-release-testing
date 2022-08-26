@@ -1,5 +1,6 @@
 name: MERGE
 env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   HUSKY: 0 # Disables husky in the pipeline to allow pushing back version bump to repo
 
 on:
