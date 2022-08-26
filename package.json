@@ -19,27 +19,37 @@
   },
   "homepage": "https://github.com/rthewhite/semantic-release-testing#readme",
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.0.3",
     "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@semantic-release/git": "^10.0.1",
     "husky": "^8.0.1",
     "semantic-release": "^19.0.5"
   },
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "release": {
     "config": "conventional-changelog-conventionalcommits",
-    "branches": ["main"],
+    "branches": [
+      "main"
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
-      ["@semantic-release/release-notes-generator", {
-        "config": "conventional-changelog-conventionalcommits"
-      }],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "config": "conventional-changelog-conventionalcommits"
+        }
+      ],
       "@semantic-release/github",
-      ["@semantic-release/git", {
-        "assets": ["package.json", "CHANGELOG.md"],
-        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-      }]
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
     ],
     "dryRun": false,
     "ci": true
