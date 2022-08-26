@@ -25,11 +25,14 @@
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^9.0.1",
     "husky": "^8.0.1",
-    "semantic-release": "^19.0.5"
+    "semantic-release": "^19.0.5",
+    "semantic-release-slack-bot": "^3.5.3"
   },
   "dependencies": {},
   "release": {
-    "branches": ["main"],
+    "branches": [
+      "main"
+    ],
     "ci": true,
     "config": "conventional-changelog-conventionalcommits",
     "dryRun": false,
@@ -38,11 +41,23 @@
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
       "@semantic-release/github",
-      ["@semantic-release/npm", { "npmPublish": false }],
-      ["@semantic-release/git", {
-        "assets": ["package.json", "CHANGELOG.md"],
-        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-      }]
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      "semantic-release-slack-bot"
     ]
   }
 }
