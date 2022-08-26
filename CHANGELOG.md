@@ -1,3 +1,10 @@
+## [2.2.0](https://github.com/rthewhite/semantic-release-testing/compare/v2.1.0...v2.2.0) (2022-08-26)
+
+
+### Features
+
+* notify on success ([9b4da78](https://github.com/rthewhite/semantic-release-testing/commit/9b4da78af9d84720ca534967fdfb7297b7acf76a))
+
 ## [2.1.0](https://github.com/rthewhite/semantic-release-testing/compare/v2.0.0...v2.1.0) (2022-08-26)
 
 
