@@ -35,9 +35,15 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       [
-        "@semantic-release/release-notes-generator",
-        {
-          "config": "conventional-changelog-conventionalcommits"
+        "@semantic-release/release-notes-generator", {
+          "config": "conventional-changelog-conventionalcommits",
+          "presetConfig": {
+            "types": [
+              { "type": "feat", "section": "Features" },
+              { "type": "fix", "section": "Bug Fixes" },
+              { "type": "chore", "hidden": false, "section": "Chore" }
+            ]
+          }
         }
       ],
       "@semantic-release/github",
