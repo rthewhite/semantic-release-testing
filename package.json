@@ -32,11 +32,12 @@
     "branches": ["main"],
     "plugins": [
       "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
+      ["@semantic-release/release-notes-generator", {
+        "config": "conventional-changelog-conventionalcommits"
+      }],
       ["@semantic-release/github", {
         "assets": [
-          { "path": "CHANGELOG.md", "label": "CHANGELOG" },
-          { "path": "package.json", "label": "package.json"}
+
         ]
       }]
     ],
