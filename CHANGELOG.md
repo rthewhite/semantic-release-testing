@@ -1,3 +1,14 @@
+## [2.0.0](https://github.com/rthewhite/semantic-release-testing/compare/v1.5.0...v2.0.0) (2022-08-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* breaking change
+
+### Features
+
+* breaking change ([4e2944e](https://github.com/rthewhite/semantic-release-testing/commit/4e2944e1fa8eb8625cf0fe0c0746fd152096fbff))
+
 ## [1.5.0](https://github.com/rthewhite/semantic-release-testing/compare/v1.4.0...v1.5.0) (2022-08-26)
 
 
